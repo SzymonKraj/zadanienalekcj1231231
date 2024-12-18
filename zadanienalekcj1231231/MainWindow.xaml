@@ -1,0 +1,46 @@
+﻿<Window x:Class="zadanienalekcj1231231.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zadanienalekcj1231231"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+
+        <UniformGrid Columns="2">
+            <UniformGrid Columns="1">
+                <GroupBox  Margin="20" Header="rodzaj przesylki">
+                    <StackPanel>
+                        <RadioButton IsChecked="True" x:Name="radioPocztowka">pocztowka</RadioButton>
+                        <RadioButton x:Name="radioList">list</RadioButton>
+                        <RadioButton x:Name="radioPaczka">paczka</RadioButton>
+                    </StackPanel>
+                </GroupBox>
+                <StackPanel>
+                        <Button x:Name="sprawdz" Click="sprawdz_Click">sprawdz cene</Button>
+                    <Image x:Name="listxd" Width="50" HorizontalAlignment="Left"></Image>
+                    <TextBlock FontWeight="Bold" x:Name="cena">cena</TextBlock>
+                    </StackPanel>
+            </UniformGrid>
+
+            <StackPanel>
+                <GroupBox Margin="20"  Header="dane adresowe">
+                <StackPanel>
+                    <TextBlock x:Name="ulica">ulica z numerem</TextBlock>
+                    <TextBox x:Name="ulicabox"></TextBox>
+                    <TextBlock x:Name="kodpocztowy">kod pocztowy</TextBlock>
+                    <TextBox x:Name="kodpocztowybox"></TextBox>
+                    <TextBlock x:Name="miasto">miasto</TextBlock>
+                    <TextBox x:Name="miastobox"></TextBox>
+                </StackPanel>
+            </GroupBox>
+    </StackPanel>
+
+            <Button x:Name="zatwierdz" Click="zatwierdz_Click" Height="50" Margin="30">zatwierdz</Button>
+    </UniformGrid>
+
+
+        
+    </StackPanel>
+</Window>
